@@ -7,9 +7,27 @@ import { Container, Row, Col, Button, Navbar, NavbarBrand, Nav, NavItem, NavLink
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        
-      </header>
+      <div className="navigation">
+        <div className="left-nav">
+          <hr className="left-hr" />
+          <div className="nav-links-left">
+            <a href="#home">Home</a>
+            <a href="#gallery">Gallery</a>
+          </div>
+        </div>
+        <div className="center-nav">
+          <div className="logo">
+            <img src={require("./Images/TheDukeGold.png")} alt="theDuke Logo" />
+          </div>
+        </div>
+        <div className="right-nav">
+          <hr className="right-hr" />
+          <div className="nav-links-right">
+            <a href="#contact">Contact</a>
+            <a href="#faq">FAQ</a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
