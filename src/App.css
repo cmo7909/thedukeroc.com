@@ -75,8 +75,48 @@ html, body {
 /* Hover effect for links */
 .nav-links-left a:hover, .nav-links-right a:hover {
   color: #fff;
+  border: 2px solid #A6822E;
 }
 
+.faq-page {
+  padding: 20px;
+  color: #A6822E;
+  width: 50vw;
+}
+
+.faq-item {
+  margin-bottom: 10px;
+  border: 1px solid #A6822E;
+  border-radius: 5px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.faq-question {
+  font-weight: bold;
+  color: #A6822E;
+}
+
+.faq-answer {
+  padding-top: 10px;
+  color: #A6822E;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: #333;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
 
 
 
