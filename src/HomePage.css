@@ -1,0 +1,9 @@
+.info-box {
+    border: double #A6822E;
+    border-width: 5px;
+    padding: 1vw 1vw;
+}
+
+.info-text {
+    color: #A6822E;
+}
