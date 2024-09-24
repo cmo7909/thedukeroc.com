@@ -1,0 +1,30 @@
+/* Container for the entire gallery */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;  /* Wrap images to the next row */
+    justify-content: space-between;  /* Evenly space images */
+    padding: 300px;
+  }
+  
+  /* Style each image container */
+  .gallery-image {
+    flex: 1 1 calc(50% - 20px);  /* Each image takes 50% of the row minus some margin */
+    margin-bottom: 20px;  /* Space between rows */
+    box-sizing: border-box;
+  }
+  
+  /* Image style */
+  .gallery-image img {
+    width: 100%;
+    height: auto;  /* Keep the image aspect ratio */
+    display: block;
+    border-radius: 8px;  /* Optional: Add some rounding for better aesthetics */
+  }
+  
+  /* Adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .gallery-image {
+      flex: 1 1 100%;  /* On smaller screens, make each image take 100% of the row */
+    }
+  }
+  

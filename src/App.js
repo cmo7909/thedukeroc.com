@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
 import FAQPage from './FAQPage';
 import HomePage from './HomePage';
-// import GalleryPage from './GalleryPage';
+import GalleryPage from './Gallery';
 import ContactPage from './ContactPage';
 
 function Navbar() {
@@ -45,7 +45,7 @@ function App() {
       
       <Routes>
         <Route path="/" element={<HomePage />} />
-        {/* <Route path="/gallery" element={<GalleryPage />} /> */}
+        <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/faq" element={<FAQPage />} />
         <Route path="/contact" element={<ContactPage />} /> 
       </Routes>

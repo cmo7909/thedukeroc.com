@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Modal, Button, Form, Alert } from 'react-bootstrap';
+import "./EmailModal.css";
 
 const EmailModal = ({ show, handleClose, handleSuccess }) => {
   const [formData, setFormData] = useState({
@@ -61,7 +62,7 @@ const EmailModal = ({ show, handleClose, handleSuccess }) => {
   };
 
   return (
-    <Modal show={show} onHide={handleClose}>
+    <Modal show={show} onHide={handleClose} centered>
       <Modal.Header closeButton>
         <Modal.Title>Send an Inquiry</Modal.Title>
       </Modal.Header>
