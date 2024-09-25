@@ -41,3 +41,30 @@
 .modal-content textarea::placeholder {
     color: grey; /* Placeholder color */
 }
+
+/* Custom styling for the success message */
+.custom-alert {
+    background-color: #333; /* Custom background color for success message */
+    color: #A6822E; /* Text color */
+    font-size: 1.2rem; /* Adjust font size */
+    text-align: center; /* Center the text */
+    padding: 15px; /* Add some padding for better appearance */
+    margin-bottom: 30px;
+    width: 100%; /* Full width within the modal */
+    border: 2px solid #A6822E;
+    border-radius: 8px; /* Rounded corners to match modal */
+  }
+  
+  /* Success message container for centering */
+  .success-message {
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .success-message button {
+    background-color: #333; /* Custom button background */
+    color: #fff; /* Button text color */
+    border: 2px solid #A6822E;
+    border-radius: 5px;
+  }
