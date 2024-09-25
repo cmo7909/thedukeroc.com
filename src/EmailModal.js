@@ -164,11 +164,11 @@ const EmailModal = ({ show, handleClose }) => {
               />
             </Form.Group>
 
-            <div className="d-flex justify-content-between mt-3">
-              <Button variant="secondary" type="submit" className="w-100 mx-2">
+            <div className="d-flex justify-content-center mt-3">
+              <Button variant="secondary" type="submit" className="w-25 mx-2 custom-button">
                 Submit
               </Button>
-              <Button variant="secondary" onClick={handleModalClose} className="w-100 mx-2">
+              <Button variant="secondary" onClick={handleModalClose} className="w-25 mx-2 custom-button">
                 Close
               </Button>
             </div>
