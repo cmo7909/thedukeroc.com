@@ -3,7 +3,7 @@ import EmailModal from './EmailModal';
 import "./ContactPage.css";
 
 const ContactPage = () => {
-  const [showModal, setShowModal] = useState(true);  // Modal is automatically shown on page load
+  const [showModal, setShowModal] = useState(false);  // Modal is automatically shown on page load
   const [successMessage, setSuccessMessage] = useState(false);
 
   // Close the modal
@@ -15,6 +15,14 @@ const ContactPage = () => {
     setSuccessMessage(true);
     setTimeout(() => setSuccessMessage(false), 5000);  // Show the success message for 5 seconds
   };
+
+  useEffect (() => {
+    const timer = setTimeout(() => {
+    setShowModal(true);
+  }, 500);
+
+  return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="contact-page">

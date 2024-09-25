@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Modal, Button, Form, Alert } from 'react-bootstrap';
+import {useNavigate} from 'react-router-dom';
 import "./EmailModal.css";
 
 const EmailModal = ({ show, handleClose, handleSuccess }) => {
@@ -13,6 +14,8 @@ const EmailModal = ({ show, handleClose, handleSuccess }) => {
   });
 
   const [error, setError] = useState(''); // State to manage error messages
+  const [success, setSuccess] = useState(false);
+  const navigate = useNavigate();
 
   // Handle form field changes
   const handleChange = (e) => {
@@ -41,9 +44,7 @@ const EmailModal = ({ show, handleClose, handleSuccess }) => {
       });
 
       if (response.ok) {
-        // If the email is successfully sent, close the modal and show the success screen
-        handleClose(); // Close the modal
-        handleSuccess(); // Show success screen
+        setSuccess(true);
         setFormData({  // Reset the form data
           name: '',
           email: '',
@@ -61,14 +62,26 @@ const EmailModal = ({ show, handleClose, handleSuccess }) => {
     }
   };
 
+  const handleModalClose = () => {
+    if(success) {
+      handleClose();
+      navigate('/');
+    }else{
+      handleClose();
+      navigate('/')
+    }
+  };
+
   return (
-    <Modal show={show} onHide={handleClose} centered>
-      <Modal.Header closeButton>
-        <Modal.Title>Send an Inquiry</Modal.Title>
-      </Modal.Header>
+    <Modal show={show} onHide={handleModalClose} backdrop="static" centered>
+      <Modal.Title>Send an Inquiry</Modal.Title>
       <Modal.Body>
-        {/* Display error message if there is one */}
+
+        {success && <Alert variant="success">Your inquiry has been sent successfully!</Alert>}
+
         {error && <Alert variant="danger">{error}</Alert>}
+
+        {!success && (
         <Form onSubmit={handleSubmit}>
           <Form.Group controlId="formName">
             <Form.Label>Name:</Form.Label>
@@ -145,11 +158,15 @@ const EmailModal = ({ show, handleClose, handleSuccess }) => {
           </Form.Group>
 
           <div className="d-flex justify-content-center mt-3">
-            <Button variant="secondary" type="submit">
+            <Button variant="secondary" type="submit" className='w-25 mx-2'>
               Submit
+            </Button>
+            <Button variant='secondary' type="close" onClick={handleModalClose} className='w-25 mx-2'>
+              Close
             </Button>
           </div>
         </Form>
+        )}
       </Modal.Body>
     </Modal>
   );

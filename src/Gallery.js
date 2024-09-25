@@ -13,6 +13,7 @@ function GalleryImage({ src, alt }) {
 function Gallery() {
   const images = [
     { src: image1, alt: 'Image 1' }
+
   ];
 
   return (

@@ -89,9 +89,9 @@ body.has-navbar, .App.has-navbar {
 
 /* Scrollable content */
 .faq-page {
-  padding: 20px;
+  padding: 300px 0;
   color: #A6822E;
-  width: 50vw;
+  width: 35vw;
   background-color: #0D0D0D;
 }
 

@@ -15,20 +15,13 @@
 }
 
 
-/* Change the color of the close (X) button in the modal */
+/* Change the close button (X) to match #A6822E using filter */
 .modal-header .btn-close {
-    background-color: transparent; /* Ensure the background is transparent */
-    color: #A6822E; /* Change the color of the X (icon) */
-    opacity: 1; /* Make sure it's fully visible */
-  }
+    background-color: transparent; /* Make sure background is transparent */
+    filter: invert(57%) sepia(98%) saturate(720%) hue-rotate(8deg) brightness(93%) contrast(101%);
+    opacity: 1; /* Make it fully visible */
+}
   
-  /* Change color on hover */
-  .modal-header .btn-close:hover {
-    color: #fff; /* Change the X to white or another color on hover */
-    background-color: #A6822E; /* Optional: Add a background color on hover */
-  }
-  
-
 /* Custom input and textarea styles inside the modal */
 /* More specific selectors to ensure input fields are properly styled */
 .modal-content input[type="text"],
@@ -40,7 +33,7 @@
     border: 1px solid #A6822E; /* Custom border color */
     border-radius: 5px;
     background-color: #333; /* Darkened background */
-    color: #A6822E; /* Custom text color */
+    color: #FFF; /* Custom text color */
 }
 
 /* Placeholder styling */
