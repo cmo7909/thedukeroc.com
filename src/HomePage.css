@@ -1,7 +1,9 @@
+/* Ensure that the content doesn't overlap with the fixed navbar */
 .info-box {
     border: double #A6822E;
     border-width: 5px;
-    padding: 1vw 1vw;
+    padding: 6vh 3vw;
+    margin-top: 30vh; 
 }
 
 .info-text {
