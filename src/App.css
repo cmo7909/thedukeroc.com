@@ -22,6 +22,7 @@ html, body {
   top: 0;
   left: 0;
   right: 0;
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -50,7 +51,7 @@ body.has-navbar, .App.has-navbar {
 }
 
 .left-hr, .right-hr {
-  border: 0.125rem solid #A6822E;
+  border: 0.125rem solid #dbac34;
   width: 100%;
   opacity: 1;
 }
@@ -75,7 +76,7 @@ body.has-navbar, .App.has-navbar {
 
 /* Link styles */
 .nav-links-left a, .nav-links-right a {
-  color: #A6822E;
+  color: #dbac34;
   text-decoration: none;
   font-size: 1.8rem;
   transition: color 0.3s;
@@ -84,20 +85,20 @@ body.has-navbar, .App.has-navbar {
 /* Hover effect for links */
 .nav-links-left a:hover, .nav-links-right a:hover {
   color: #fff;
-  border: 2px solid #A6822E;
+  border: 2px solid #dbac34;
 }
 
 /* Scrollable content */
 .faq-page {
   padding: 300px 0;
-  color: #A6822E;
+  color: #dbac34;
   width: 35vw;
   background-color: #0D0D0D;
 }
 
 .faq-item {
   margin-bottom: 10px;
-  border: 1px solid #A6822E;
+  border: 1px solid #dbac34;
   border-radius: 5px;
   padding: 20px;
   cursor: pointer;
@@ -105,12 +106,12 @@ body.has-navbar, .App.has-navbar {
 
 .faq-question {
   font-weight: bold;
-  color: #A6822E;
+  color: #dbac34;
 }
 
 .faq-answer {
   padding-top: 10px;
-  color: #A6822E;
+  color: #dbac34;
 }
 
 nav {
