@@ -1,3 +1,5 @@
+@media (min-width: 1025px) {
+
 /* Ensure that the content doesn't overlap with the fixed navbar */
 .info-box {
     border: double #dbac34;
@@ -9,4 +11,18 @@
 
 .info-text {
     color: #dbac34;
+}
+}
+
+@media (max-width: 768px) {
+    .info-box {
+        border: double #dbac34;
+        border-width: 5px;
+        margin-top: 50vh;
+        width: 50vw;
+    }
+    
+    .info-text {
+        color: #dbac34;
+    }
 }

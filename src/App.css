@@ -1,152 +1,264 @@
-/* Ensure html and body take up the full height */
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-size: 16px;
+/* Default (Desktop) Styles - Applied for screens larger than 1024px */
+@media (min-width: 1025px) {
+  /* Ensure html and body take up the full height */
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 16px;
+  }
+
+  /* App container */
+  .App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    background-color: #0D0D0D;
+  }
+
+  /* Fixed position for the navigation bar */
+  .navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vw;
+    background-color: #0D0D0D;
+    z-index: 1000;
+    width: 100%;
+    height: 20vh;
+  }
+
+  /* Ensure page content does not overlap the fixed navbar */
+  body.has-navbar, .App.has-navbar {
+    padding-top: 20vh;
+  }
+
+  .left-nav, .right-nav {
+    flex-grow: 1;
+    position: relative;
+  }
+
+  .center-nav {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    padding: 1.5vw 2vw;
+  }
+
+  .left-hr, .right-hr {
+    border: 0.125rem solid #dbac34;
+    width: 100%;
+    opacity: 1;
+  }
+
+  /* Center logo */
+  .logo img {
+    height: auto;
+    width: 15vw;
+    max-width: 17rem;
+  }
+
+  .nav-links-left, .nav-links-right {
+    position: absolute;
+    top: -2.5rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 25%;
+    align-items: center;
+  }
+
+  .nav-links-left a, .nav-links-right a {
+    color: #dbac34;
+    text-decoration: none;
+    font-size: 1.8rem;
+    transition: color 0.3s;
+  }
+
+  .nav-links-left a:hover, .nav-links-right a:hover {
+    color: #fff;
+    border: 2px solid #dbac34;
+  }
+
+  .faq-page {
+    padding: 300px 0;
+    color: #dbac34;
+    width: 35vw;
+    background-color: #0D0D0D;
+  }
+
+  .faq-item {
+    margin-bottom: 10px;
+    border: 1px solid #dbac34;
+    border-radius: 5px;
+    padding: 20px;
+    cursor: pointer;
+  }
+
+  .faq-question {
+    font-weight: bold;
+    color: #dbac34;
+  }
+
+  .faq-answer {
+    padding-top: 10px;
+    color: #dbac34;
+  }
+
+  .contact-page {
+    background-color: #0D0D0D;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+
+  .alert {
+    margin: 20px auto;
+    width: 50%;
+  }
 }
 
-/* App container */
-.App {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  text-align: center;
-  background-color: #0D0D0D;
+/* Tablet Styles (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Adjust tablet-specific styles */
+  body {
+    font-size: 15px;
+  }
+
+  .App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    background-color: #0D0D0D;
+  }
+
+  .navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vw;
+    background-color: #0D0D0D;
+    z-index: 1000;
+    width: 100%;
+    height: 12vh;
+  }
+
+  body.has-navbar, .App.has-navbar {
+    padding-top: 20vh;
+  }
+
+  .left-nav, .right-nav {
+    flex-grow: 1;
+    position: relative;
+  }
+
+  .center-nav {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    padding: 1.5vw 2vw;
+  }
+
+  .logo img {
+    width: 20vw;
+  }
+
+  .nav-links-left, .nav-links-right {
+    position: absolute;
+    top: -1rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 15%;
+    align-items: center;
+  }
+
+  .nav-links-left a, .nav-links-right a {
+    color: #dbac34;
+    text-decoration: none;
+    font-size: 1 rem;
+    transition: color 0.3s;
+  }
+
+  .nav-links-left a:hover, .nav-links-right a:hover {
+    color: #fff;
+    border: 2px solid #dbac34;
+  }
+
+  .left-hr, .right-hr {
+    border: 0.125rem solid #dbac34;
+    width: 100%;
+    opacity: 1;
+  }
+
+  .faq-page {
+    width: 50vw;
+  }
+
+  .contact-page {
+    padding: 30px;
+  }
 }
 
-/* Fixed position for the navigation bar */
-.navigation {
-  position: fixed;  /* Fix the navbar at the top */
-  top: 0;
-  left: 0;
-  right: 0;
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 2vw;
-  background-color: #0D0D0D;  /* Background color for navbar */
-  z-index: 1000;  /* Ensure the navbar stays above the content */
-  width: 100%;  /* Make sure the navbar spans the full width */
-  height: 20vh;  /* Set a height for the navbar */
+/* Mobile Styles (up to 768px) */
+@media (max-width: 768px) {
+  /* Ensure html and body take up the full height */
+  html, body {
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* App container */
+  .App {
+    padding: 0 1vw;
+  }
+
+  /* Mobile Navigation (use hamburger menu if needed) */
+  .navigation {
+    display: none; /* Hide the desktop navigation bar */
+  }
+
+  /* Adjust logo size */
+  .logo img {
+    width: 50vw;
+    max-width: 200px;
+  }
+
+  /* FAQ page styling for mobile */
+  .faq-page {
+    width: 90vw;
+    padding: 100px 0;
+  }
+
+  /* Adjust FAQ item size */
+  .faq-item {
+    padding: 10px;
+  }
+
+  /* Contact Page */
+  .contact-page {
+    padding: 15px;
+    min-height: 100vh;
+  }
 }
-
-/* Ensure page content does not overlap the fixed navbar */
-body.has-navbar, .App.has-navbar {
-  padding-top: 20vh;  /* Adjust this based on the navbar height */
-}
-
-.left-nav, .right-nav {
-  flex-grow: 1;
-  position: relative;
-}
-
-.center-nav {
-  flex-shrink: 0;
-  display: flex;
-  justify-content: center;
-  padding: 1.5vw 2vw;
-}
-
-.left-hr, .right-hr {
-  border: 0.125rem solid #dbac34;
-  width: 100%;
-  opacity: 1;
-}
-
-/* Center logo */
-.logo img {
-  height: auto;
-  width: 15vw;
-  max-width: 17rem;
-}
-
-/* Flexbox for positioning the links at 1/3 and 2/3 */
-.nav-links-left, .nav-links-right {
-  position: absolute;
-  top: -2.5rem;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding: 0 25%;
-  align-items: center;
-}
-
-/* Link styles */
-.nav-links-left a, .nav-links-right a {
-  color: #dbac34;
-  text-decoration: none;
-  font-size: 1.8rem;
-  transition: color 0.3s;
-}
-
-/* Hover effect for links */
-.nav-links-left a:hover, .nav-links-right a:hover {
-  color: #fff;
-  border: 2px solid #dbac34;
-}
-
-/* Scrollable content */
-.faq-page {
-  padding: 300px 0;
-  color: #dbac34;
-  width: 35vw;
-  background-color: #0D0D0D;
-}
-
-.faq-item {
-  margin-bottom: 10px;
-  border: 1px solid #dbac34;
-  border-radius: 5px;
-  padding: 20px;
-  cursor: pointer;
-}
-
-.faq-question {
-  font-weight: bold;
-  color: #dbac34;
-}
-
-.faq-answer {
-  padding-top: 10px;
-  color: #dbac34;
-}
-
-nav {
-  display: flex;
-  justify-content: space-around;
-  padding: 10px;
-  background-color: #333;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Contact Page - Full-screen layout without navbar */
-.contact-page {
-  background-color: #0D0D0D;  /* Ensure the background color is applied */
-  min-height: 100vh;  /* Ensure the contact page takes full screen height */
-  margin: 0;  /* Remove any margin */
-  padding: 20px;  /* Add padding for content inside */
-  padding-top: 0;  /* Remove top padding specific to the contact page */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  color: white;
-}
-
-.alert {
-  margin: 20px auto;
-  width: 50%;
-}
-
-
