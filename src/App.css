@@ -180,7 +180,9 @@
   }
 
   .logo img {
-    width: 20vw;
+    height: auto;
+    width: 15vw;
+    max-width: 17rem;
   }
 
   .nav-links-left, .nav-links-right {
@@ -231,7 +233,12 @@
 
   /* App container */
   .App {
-    padding: 0 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    background-color: #0D0D0D;
   }
 
   /* Mobile Navigation (use hamburger menu if needed) */
@@ -243,6 +250,13 @@
   .logo img {
     width: 50vw;
     max-width: 200px;
+  }
+
+  .center-nav {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    padding: 1.5vw 2vw;
   }
 
   /* FAQ page styling for mobile */
