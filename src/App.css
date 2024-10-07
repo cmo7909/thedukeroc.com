@@ -1,3 +1,8 @@
+/* Apply box-sizing globally to include padding and borders within the height and width */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 /* Default (Desktop) Styles - Applied for screens larger than 1024px */
 @media (min-width: 1025px) {
   /* Ensure html and body take up the full height */
@@ -6,6 +11,12 @@
     padding: 0;
     height: 100%;
     font-size: 16px;
+    background-color: #0D0D0D;
+    background-image: url('./Images/TheDukeDesktopBackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 
   /* App container */
@@ -15,16 +26,10 @@
     align-items: center;
     min-height: 100vh;
     text-align: center;
-    background-color: #0D0D0D;
-    background-image: url('./Images/TheDukeDesktopBackground.jpg'); /* Desktop background image */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
   }
 
-  /* Fixed position for the navigation bar */
   .navigation {
+    box-sizing: border-box; 
     position: fixed;
     top: 0;
     left: 0;
@@ -32,17 +37,20 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 11vh 2vw;
+    height: 20vh; 
+    padding: 0 2vw; 
     background-color: rgba(13, 13, 13, 0.6);
     z-index: 1000;
     width: 100%;
-    height: 20vh;
   }
 
-  /* Ensure page content does not overlap the fixed navbar */
-  body.has-navbar, .App.has-navbar {
-    padding-top: 20vh;
+  .main-content {
+    margin-top: 20vh; 
+    padding: 20px;
+    position: relative;
+    z-index: 1; 
   }
+
 
   .left-nav, .right-nav {
     flex-grow: 1;
@@ -92,10 +100,10 @@
   }
 
   .faq-page {
-    padding: 300px 0;
+    padding: 5vh 0;
     color: #dbac34;
     width: 35vw;
-    background-color: #0D0D0D;
+    margin: 0 auto;
   }
 
   .faq-item {
@@ -104,6 +112,7 @@
     border-radius: 5px;
     padding: 20px;
     cursor: pointer;
+    background-color: #0D0D0D;
   }
 
   .faq-question {
@@ -140,6 +149,12 @@
   /* Adjust tablet-specific styles */
   body {
     font-size: 15px;
+    background-color: #0D0D0D;
+    background-image: url('./Images/TheDukeDesktopBackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 
   .App {
@@ -148,15 +163,10 @@
     align-items: center;
     min-height: 100vh;
     text-align: center;
-    background-color: #0D0D0D;
-    background-image: url('./Images/TheDukeDesktopBackground.jpg'); /* Tablet background image */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
   }
 
   .navigation {
+    box-sizing: border-box; /* Include padding within the height */
     position: fixed;
     top: 0;
     left: 0;
@@ -164,15 +174,19 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12vh 2vw;
+    height: 12vh;
+    padding: 0 2vw; /* Adjusted padding */
     background-color: rgba(13, 13, 13, 0.6);
     z-index: 1000;
     width: 100%;
-    height: 12vh;
   }
 
-  body.has-navbar, .App.has-navbar {
-    padding-top: 20vh;
+  .main-content {
+    margin-top: 12vh; /* Match the height of the navbar */
+    padding: 20px;
+    width: 100%;
+    min-height: calc(100vh - 12vh);
+    background-color: #0D0D0D;
   }
 
   .left-nav, .right-nav {
@@ -190,7 +204,6 @@
   .logo img {
     height: auto;
     width: 22vw;
-    height: auto;
     max-width: 20rem;
   }
 
@@ -207,7 +220,7 @@
   .nav-links-left a, .nav-links-right a {
     color: #dbac34;
     text-decoration: none;
-    font-size: 1 rem;
+    font-size: 1rem; 
     transition: color 0.3s;
   }
 
@@ -223,7 +236,29 @@
   }
 
   .faq-page {
-    width: 50vw;
+    padding: 5vh 0;
+    color: #dbac34;
+    width: 75vw;
+    margin: 0 auto;
+  }
+
+  .faq-item {
+    margin-bottom: 10px;
+    border: 1px solid #dbac34;
+    border-radius: 5px;
+    padding: 20px;
+    cursor: pointer;
+    background-color: #0D0D0D;
+  }
+
+  .faq-question {
+    font-weight: bold;
+    color: #dbac34;
+  }
+
+  .faq-answer {
+    padding-top: 10px;
+    color: #dbac34;
   }
 
   .contact-page {
@@ -238,6 +273,13 @@
     font-size: 14px;
     padding: 0;
     margin: 0;
+    /* Move background to body */
+    background-color: #0D0D0D;
+    background-image: url('./Images/TheDukeMobileBackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 
   /* App container */
@@ -247,12 +289,6 @@
     align-items: center;
     min-height: 100vh;
     text-align: center;
-    background-color: #0D0D0D;
-    background-image: url('./Images/TheDukeMobileBackground.jpg'); /* Mobile background image */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
   }
 
   /* Mobile Navigation (use hamburger menu if needed) */
@@ -273,10 +309,19 @@
     padding: 1.5vw 2vw;
   }
 
+  /* Main content */
+  .main-content {
+    margin-top: 0; /* No fixed navbar on mobile */
+    padding: 20px;
+    width: 100%;
+    background-color: #0D0D0D;
+  }
+
   /* FAQ page styling for mobile */
   .faq-page {
     width: 90vw;
     padding: 100px 0;
+    margin: 0 auto;
   }
 
   /* Adjust FAQ item size */
@@ -290,3 +335,4 @@
     min-height: 100vh;
   }
 }
+

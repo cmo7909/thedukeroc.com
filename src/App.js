@@ -42,13 +42,16 @@ function App() {
     <div className="App">
       {/* Conditionally render the navbar, excluding it on specific pages (e.g., '/contact') */}
       {location.pathname !== '/contact' && <Navbar />}
-      
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/gallery" element={<GalleryPage />} />
-        <Route path="/faq" element={<FAQPage />} />
-        <Route path="/contact" element={<ContactPage />} /> 
-      </Routes>
+
+      {/* Wrap the Routes inside a .main-content div */}
+      <div className="main-content">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/faq" element={<FAQPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+      </div>
     </div>
   );
 }
@@ -62,3 +65,4 @@ function AppWrapper() {
 }
 
 export default AppWrapper;
+
