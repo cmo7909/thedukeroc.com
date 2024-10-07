@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import EmailModal from './EmailModal';
-import "./ContactPage.css";
 
 const ContactPage = () => {
   const [showModal, setShowModal] = useState(false);  // Modal is automatically shown on page load

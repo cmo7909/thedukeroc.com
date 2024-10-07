@@ -6,10 +6,9 @@
 /* Default (Desktop) Styles - Applied for screens larger than 1024px */
 @media (min-width: 1025px) {
   /* Ensure html and body take up the full height */
-  html, body {
+  body {
     margin: 0;
     padding: 0;
-    height: 100%;
     font-size: 16px;
     background-color: #0D0D0D;
     background-image: url('./Images/TheDukeDesktopBackground.jpg');
@@ -21,34 +20,29 @@
 
   /* App container */
   .App {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     min-height: 100vh;
     text-align: center;
   }
 
   .navigation {
-    box-sizing: border-box; 
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
+    height: 20vh;
+    padding: 11vh 2vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 20vh; 
-    padding: 0 2vw; 
-    background-color: rgba(13, 13, 13, 0.6);
+    background-color: rgba(13, 13, 13, 0.6); /* Semi-transparent */
     z-index: 1000;
-    width: 100%;
   }
 
   .main-content {
-    margin-top: 20vh; 
+    margin-top: 1vh; /* Push content below navbar */
     padding: 20px;
-    position: relative;
-    z-index: 1; 
+    background-color: transparent; /* Allow background image to show if desired */
+    z-index: 1;
   }
 
 
@@ -126,7 +120,6 @@
   }
 
   .contact-page {
-    background-color: #0D0D0D;
     min-height: 100vh;
     margin: 0;
     padding: 20px;
@@ -149,7 +142,6 @@
   /* Adjust tablet-specific styles */
   body {
     font-size: 15px;
-    background-color: #0D0D0D;
     background-image: url('./Images/TheDukeDesktopBackground.jpg');
     background-size: cover;
     background-position: center;
@@ -166,15 +158,14 @@
   }
 
   .navigation {
-    box-sizing: border-box; /* Include padding within the height */
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 12vh;
+    height: 20vh;
     padding: 0 2vw; /* Adjusted padding */
     background-color: rgba(13, 13, 13, 0.6);
     z-index: 1000;
@@ -185,8 +176,6 @@
     margin-top: 12vh; /* Match the height of the navbar */
     padding: 20px;
     width: 100%;
-    min-height: calc(100vh - 12vh);
-    background-color: #0D0D0D;
   }
 
   .left-nav, .right-nav {
@@ -236,9 +225,8 @@
   }
 
   .faq-page {
-    padding: 5vh 0;
     color: #dbac34;
-    width: 75vw;
+    width: 60vw;
     margin: 0 auto;
   }
 

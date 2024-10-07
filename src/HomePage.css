@@ -9,8 +9,8 @@
       border: double #dbac34;
       border-width: 5px;
       padding: 6vh 3vw;
-      margin-top: 0; /* Start from the top of .main-content */
       width: 40vw;
+      margin: 0 auto;
     }
   
     .info-text {
@@ -20,12 +20,12 @@
   
   @media (min-width: 769px) and (max-width: 1024px) {
     .info-box {
-      border: double #dbac34;
-      border-width: 5px;
-      padding: 4vh 3vw;
-      margin-top: 0; /* Start from the top of .main-content */
-      width: 50vw;
-    }
+        border: double #dbac34;
+        border-width: 5px;
+        padding: 6vh 3vw;
+        width: 40vw;
+        margin: 0 auto;
+      }
   
     .info-text {
       color: #dbac34;
@@ -34,11 +34,12 @@
   
   @media (max-width: 768px) {
     .info-box {
-      border: double #dbac34;
-      border-width: 5px;
-      margin-top: 0; /* Start from the top of .main-content */
-      width: 80vw; /* Adjusted width for mobile responsiveness */
-    }
+        border: double #dbac34;
+        border-width: 5px;
+        padding: 6vh 3vw;
+        width: 40vw;
+        margin: 0 auto;
+      }
   
     .info-text {
       color: #dbac34;
