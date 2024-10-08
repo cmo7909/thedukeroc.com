@@ -262,7 +262,6 @@
     padding: 0;
     margin: 0;
     /* Move background to body */
-    background-color: #0D0D0D;
     background-image: url('./Images/TheDukeMobileBackground.jpg');
     background-size: cover;
     background-position: center;
@@ -279,15 +278,22 @@
     text-align: center;
   }
 
-  /* Mobile Navigation (use hamburger menu if needed) */
-  .navigation {
-    display: none; /* Hide the desktop navigation bar */
+  .navigation .left-nav,
+  .navigation .right-nav {
+    display: none;
   }
 
-  /* Adjust logo size */
-  .logo img {
+  /* Adjust the navigation bar to center the logo */
+  .navigation {
+    justify-content: center;
+    padding: 10px 0; /* Adjust padding as needed */
+  }
+
+  /* Adjust the logo size if necessary */
+  .navigation .logo img {
     width: 50vw;
-    max-width: 200px;
+    max-width: 70vw;
+    height: auto;
   }
 
   .center-nav {
@@ -302,7 +308,6 @@
     margin-top: 0; /* No fixed navbar on mobile */
     padding: 20px;
     width: 100%;
-    background-color: #0D0D0D;
   }
 
   /* FAQ page styling for mobile */
