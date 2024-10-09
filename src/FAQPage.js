@@ -1,5 +1,7 @@
 import React from 'react';
 import FAQItem from './FAQItem';
+import { useState } from 'react';
+import Map from './Map';
 
 function FAQPage() {
   const faqItems = [
@@ -67,6 +69,10 @@ function FAQPage() {
       question: "Are there discounts for nonprofit organizations?",
       answer: "We love to work with our community organizations! Ask us about our discount program for nonprofit events and fundraisers. 501c3 or other NPO documentation required."
     },
+    {
+      question: "Where are we located?",
+      answer: <Map/>,
+    }
     // Add more FAQs as needed
   ];
 
