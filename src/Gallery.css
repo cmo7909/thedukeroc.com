@@ -1,15 +1,20 @@
+/* Default (Desktop) Styles - Applied for screens larger than 1024px */
+@media (min-width: 1025px) {
+
 /* Container for the entire gallery */
 .gallery-container {
     display: flex;
     flex-wrap: wrap;  /* Wrap images to the next row */
     justify-content: space-between;  /* Evenly space images */
-    padding: 300px;
+    padding: 100px ;
   }
   
   /* Style each image container */
   .gallery-image {
     flex: 1 1 calc(50% - 20px);  /* Each image takes 50% of the row minus some margin */
     margin-bottom: 20px;  /* Space between rows */
+    padding: 20px 20px;
+    border: solid #dbac34;
     box-sizing: border-box;
   }
   
@@ -20,11 +25,59 @@
     display: block;
     border-radius: 8px;  /* Optional: Add some rounding for better aesthetics */
   }
+
+}
+
+  /* Tablet Styles (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .gallery-container {
+    display: flex;
+    flex-wrap: wrap;  /* Wrap images to the next row */
+    justify-content: space-between;  /* Evenly space images */
+    padding: 30px;
+  }
+  
+  /* Style each image container */
+  .gallery-image {
+    flex: 1 1 calc(50% - 20px);  /* Each image takes 50% of the row minus some margin */
+    margin-bottom: 20px;  /* Space between rows */
+    padding: 20px 20px;
+    border: solid #dbac34;
+    box-sizing: border-box;
+  }
+  
+  /* Image style */
+  .gallery-image img {
+    width: 100%;
+    height: auto;  /* Keep the image aspect ratio */
+    display: block;
+    border-radius: 8px;  /* Optional: Add some rounding for better aesthetics */
+  }
+}
   
   /* Adjustments for smaller screens */
   @media (max-width: 768px) {
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;  /* Wrap images to the next row */
+      justify-content: space-between;  /* Evenly space images */
+      padding: 40px;
+    }
+    
+    /* Style each image container */
     .gallery-image {
-      flex: 1 1 100%;  /* On smaller screens, make each image take 100% of the row */
+      margin-bottom: 20px;  /* Space between rows */
+      padding: 20px 20px;
+      border: solid #dbac34;
+      box-sizing: border-box;
+    }
+    
+    /* Image style */
+    .gallery-image img {
+      width: 100%;
+      height: auto;  /* Keep the image aspect ratio */
+      display: block;
+      border-radius: 8px;  /* Optional: Add some rounding for better aesthetics */
     }
   }
   

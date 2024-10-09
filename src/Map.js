@@ -1,15 +1,6 @@
 import React, { useRef, useCallback } from 'react';
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
 
-const containerStyle = {
-  width: '100%',     // Full width of the parent container
-  height: '400px',   // Fixed height, but you can adjust as needed
-  maxWidth: '600px', // Max width to prevent it from becoming too wide
-  minWidth: '300px', // Min width to prevent it from becoming too narrow
-  margin: '0 auto',  // Center the container
-  padding: '10px',   // Add padding around the map container
-  boxSizing: 'border-box', // Include padding in the width calculation
-};
 
 const center = {
   lat: 43.1577,  
@@ -50,7 +41,7 @@ const Map = () => {
       libraries={libraries} 
     >
       <GoogleMap
-        mapContainerStyle={containerStyle}
+        mapContainerClassName="map-container"
         center={center}
         zoom={17}
         onLoad={onMapLoad}

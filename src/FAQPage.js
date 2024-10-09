@@ -1,6 +1,5 @@
 import React from 'react';
 import FAQItem from './FAQItem';
-import { useState } from 'react';
 import Map from './Map';
 
 function FAQPage() {

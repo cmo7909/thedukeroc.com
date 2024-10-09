@@ -138,6 +138,12 @@
     margin: 20px auto;
     width: 50%;
   }
+
+  .map-container {
+    height: 50vh;
+    width: auto;
+    max-width: 80vw;
+  }
 }
 
 /* Tablet Styles (769px - 1024px) */
@@ -259,9 +265,15 @@
   .contact-page {
     padding: 30px;
   }
+
+  .map-container {
+    height: 50vh;
+    width: auto;
+    max-width: 80vw;
+  }
 }
 
-/* Mobile Styles (up to 768px) */
+/* Mobile Styles (up to 768px) /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 @media (max-width: 768px) {
   /* Ensure html and body take up the full height */
   html, body {
@@ -385,20 +397,40 @@
 
   /* FAQ page styling for mobile */
   .faq-page {
-    width: 90vw;
-    padding: 100px 0;
+    color: #dbac34;
+    width: 60vw;
     margin: 0 auto;
   }
 
-  /* Adjust FAQ item size */
   .faq-item {
-    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #dbac34;
+    border-radius: 5px;
+    padding: 20px;
+    cursor: pointer;
+    background-color: #0D0D0D;
+  }
+
+  .faq-question {
+    font-weight: bold;
+    color: #dbac34;
+  }
+
+  .faq-answer {
+    padding-top: 10px;
+    color: #dbac34;
   }
 
   /* Contact Page */
   .contact-page {
     padding: 15px;
     min-height: 100vh;
+  }
+
+  .map-container {
+    height: 60vh;
+    width: auto;
+    max-width: 80vw;
   }
 }
 
