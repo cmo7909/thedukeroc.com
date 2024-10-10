@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Modal, Button, Form, Alert } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom';
 import "./EmailModal.css";
 
 const EmailModal = ({ show, handleClose }) => {
@@ -13,37 +13,37 @@ const EmailModal = ({ show, handleClose }) => {
     inquiry: '',
   });
 
-  const [error, setError] = useState(''); // State to manage error messages
-  const [success, setSuccess] = useState(false); // State to track submission success
-  const navigate = useNavigate(); // Initialize useNavigate hook for redirection
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState(false);
+  const navigate = useNavigate(); 
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    setError(''); // Clear error when user starts typing
+    setError(''); 
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Check if all fields are filled
+   
     if (!formData.name || !formData.email || !formData.number || !formData.dates || !formData.partySize || !formData.inquiry) {
       setError('All fields are required. Please fill in all fields before submitting.');
       return;
     }
 
     try {
-      // Make a POST request to the send-email API endpoint
+     
       const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),  // Send the form data as JSON
+        body: JSON.stringify(formData),  
       });
 
       if (response.ok) {
-        setSuccess(true); // Set success to true to show success message
-        setFormData({  // Reset the form data
+        setSuccess(true); 
+        setFormData({  
           name: '',
           email: '',
           number: '',

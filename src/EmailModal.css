@@ -14,59 +14,59 @@
     color: #A6822E;
 }
   
-/* Custom styling for input fields and textareas inside the modal */
+
 .modal-content input[type="text"],
 .modal-content input[type="email"],
 .modal-content textarea {
-  background-color: #333; /* Dark background */
-  color: #FFF; /* Custom text color */
-  border: 1px solid #A6822E; /* Custom border */
+  background-color: #333; 
+  color: #FFF; 
+  border: 1px solid #A6822E; 
   border-radius: 5px;
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
 }
 
-/* Ensure placeholders have the same color */
+
 .modal-content input::placeholder,
 .modal-content textarea::placeholder {
-  color: #A6822E; /* Placeholder color */
+  color: #A6822E;
 }
 
-/* Specifically target the textarea */
+
 .modal-content textarea {
-  background-color: #333 !important; /* Ensure textarea background stays dark */
-  color: #FFF !important; /* Ensure text color remains */
-  border: 1px solid #A6822E; /* Custom border for the textarea */
+  background-color: #333 !important;
+  color: #FFF !important; 
+  border: 1px solid #A6822E; 
   width: 100%;
   padding: 10px;
-  resize: none; /* Disable resizing for better control over appearance */
+  resize: none; 
 }
 
-/* Optional: Add focus state to ensure consistent styling when focused */
+
 .modal-content input:focus,
 .modal-content textarea:focus {
   background-color: #333;
   color: #FFF;
   border: 1px solid #A6822E;
-  outline: none; /* Remove default outline */
+  outline: none; 
 }
 
 
-/* Custom styling for the success message */
+
 .custom-alert {
-    background-color: #333; /* Custom background color for success message */
-    color: #A6822E; /* Text color */
-    font-size: 1.2rem; /* Adjust font size */
-    text-align: center; /* Center the text */
-    padding: 15px; /* Add some padding for better appearance */
+    background-color: #333;
+    color: #A6822E; 
+    font-size: 1.2rem; 
+    text-align: center;
+    padding: 15px; 
     margin-bottom: 30px;
-    width: 100%; /* Full width within the modal */
+    width: 100%; 
     border: 2px solid #A6822E;
-    border-radius: 8px; /* Rounded corners to match modal */
+    border-radius: 8px; 
   }
   
-  /* Success message container for centering */
+
   .success-message {
     padding: 20px;
     text-align: center;
@@ -74,8 +74,8 @@
   }
   
   .success-message button {
-    background-color: #333; /* Custom button background */
-    color: #fff; /* Button text color */
+    background-color: #333;
+    color: #fff; 
     border: 2px solid #A6822E;
     border-radius: 5px;
   }
@@ -86,13 +86,13 @@
     background-color: #1a1a1a;
   }
 
-  /* Custom scrollbar for the inquiry textarea */
+
 textarea {
-    background-color: #333; /* Ensures background color is dark */
-    color: #A6822E; /* Text color */
-    resize: none; /* Disable resizing if desired */
+    background-color: #333; 
+    color: #A6822E;
+    resize: none;
     
-    /* WebKit browsers scrollbar styling */
-    scrollbar-width: thin; /* For Firefox */
-    scrollbar-color: #A6822E #1a1a1a; /* For Firefox */
+
+    scrollbar-width: thin; 
+    scrollbar-color: #A6822E #1a1a1a;
   }

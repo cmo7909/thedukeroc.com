@@ -1,10 +1,9 @@
-/* Apply box-sizing globally */
+
 *, *::before, *::after {
     box-sizing: border-box;
   }
   
   @media (min-width: 1025px) {
-    /* Adjusted .info-box */
     .info-box {
       border: double #dbac34;
       border-width: 5px;

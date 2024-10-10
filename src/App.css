@@ -1,11 +1,10 @@
-/* Apply box-sizing globally to include padding and borders within the height and width */
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
 /* Default (Desktop) Styles - Applied for screens larger than 1024px */
 @media (min-width: 1025px) {
-  /* Ensure html and body take up the full height */
   body {
     margin: 0;
     padding: 0;
@@ -18,7 +17,6 @@
     background-attachment: fixed;
   }
 
-  /* App container */
   .App {
     min-height: 100vh;
     text-align: center;
@@ -34,14 +32,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(13, 13, 13, 0.6); /* Semi-transparent */
+    background-color: rgba(13, 13, 13, 0.6); 
     z-index: 1000;
   }
 
   .main-content {
-    margin-top: 1vh; /* Push content below navbar */
+    margin-top: 1vh; 
     padding: 20px;
-    background-color: transparent; /* Allow background image to show if desired */
+    background-color: transparent;
     z-index: 1;
   }
 
@@ -67,7 +65,7 @@
     opacity: 1;
   }
 
-  /* Center logo */
+  
   .logo img {
     height: auto;
     width: 17vw;
@@ -146,7 +144,7 @@
   }
 }
 
-/* Tablet Styles (769px - 1024px) */
+/* Tablet Styles (769px - 1024px) ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 @media (min-width: 769px) and (max-width: 1024px) {
   /* Adjust tablet-specific styles */
   body {
@@ -182,7 +180,7 @@
   }
 
   .main-content {
-    margin-top: 12vh; /* Match the height of the navbar */
+    margin-top: 12vh; 
     padding: 20px;
     width: 100%;
   }
@@ -275,12 +273,11 @@
 
 /* Mobile Styles (up to 768px) /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 @media (max-width: 768px) {
-  /* Ensure html and body take up the full height */
+
   html, body {
     font-size: 14px;
     padding: 0;
     margin: 0;
-    /* Move background to body */
     background-image: url('./Images/TheDukeMobileBackground.jpg');
     background-size: cover;
     background-position: center;
@@ -288,7 +285,6 @@
     background-attachment: fixed;
   }
 
-  /* App container */
   .App {
     display: flex;
     flex-direction: column;
@@ -297,16 +293,16 @@
     text-align: center;
   }
 
-   /* Position the hamburger menu */
+   
    .hamburger-menu {
     position: fixed;
-    top: 20px; /* Adjust as needed */
-    left: 20px; /* Adjust as needed */
-    z-index: 1100; /* Above other elements */
+    top: 20px; 
+    left: 20px; 
+    z-index: 1100;
     cursor: pointer;
   }
 
-  /* Style the hamburger icon */
+
   .hamburger-icon {
     width: 30px;
     height: 22px;
@@ -318,32 +314,32 @@
   .hamburger-icon span {
     display: block;
     height: 4px;
-    background-color: #dbac34; /* Adjust color as needed */
+    background-color: #dbac34; 
     border-radius: 2px;
   }
 
-  /* Adjust the navigation bar to center the logo */
+
   .navigation {
     justify-content: center;
     padding: 10px 0;
-    height: auto; /* Let the content determine the height */
+    height: auto; 
   }
 
-  /* Adjust the logo size if necessary */
+
   .navigation .logo img {
     width: 50vw;
     max-width: 200px;
     height: auto;
   }
 
-  /* Mobile Menu Styles */
+
   .mobile-menu {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(13, 13, 13, 0.95); /* Semi-transparent background */
+    background-color: rgba(13, 13, 13, 0.95); 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -368,13 +364,12 @@
     display: none;
   }
 
-  /* Adjust the navigation bar to center the logo */
   .navigation {
     justify-content: center;
-    padding: 10px 0; /* Adjust padding as needed */
+    padding: 10px 0; 
   }
 
-  /* Adjust the logo size if necessary */
+  
   .navigation .logo img {
     width: 50vw;
     max-width: 70vw;
@@ -388,14 +383,13 @@
     padding: 1.5vw 2vw;
   }
 
-  /* Main content */
+
   .main-content {
-    margin-top: 0; /* No fixed navbar on mobile */
+    margin-top: 0;
     padding: 20px;
     width: 100%;
   }
 
-  /* FAQ page styling for mobile */
   .faq-page {
     color: #dbac34;
     width: 60vw;
@@ -421,7 +415,7 @@
     color: #dbac34;
   }
 
-  /* Contact Page */
+
   .contact-page {
     padding: 15px;
     min-height: 100vh;

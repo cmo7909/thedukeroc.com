@@ -65,10 +65,8 @@ function App() {
 
   return (
     <div className="App">
-      {/* Conditionally render the navbar, excluding it on specific pages (e.g., '/contact') */}
       {location.pathname !== '/contact' && <Navbar />}
 
-      {/* Wrap the Routes inside a .main-content div */}
       <div className="main-content">
         <Routes>
           <Route path="/" element={<HomePage />} />

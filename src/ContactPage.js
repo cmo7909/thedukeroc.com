@@ -2,17 +2,16 @@ import React, { useState, useEffect } from 'react';
 import EmailModal from './EmailModal';
 
 const ContactPage = () => {
-  const [showModal, setShowModal] = useState(false);  // Modal is automatically shown on page load
+  const [showModal, setShowModal] = useState(false);  
   const [successMessage, setSuccessMessage] = useState(false);
 
-  // Close the modal
+
   const handleCloseModal = () => setShowModal(false);
 
-  // Show success message
   const handleSuccess = () => {
     setShowModal(false);
     setSuccessMessage(true);
-    setTimeout(() => setSuccessMessage(false), 5000);  // Show the success message for 5 seconds
+    setTimeout(() => setSuccessMessage(false), 5000); 
   };
 
   useEffect (() => {
