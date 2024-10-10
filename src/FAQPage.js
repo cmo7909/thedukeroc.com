@@ -34,7 +34,7 @@ function FAQPage() {
     },
     {
       question: "What food/bar packages do you offer?",
-      answer: "Reach out to our event coordinators to send you further details! Catering &amp; bar packages are divided up seasonally and by size of group; when filling out the inquiry from, the more information you can provide the better!"
+      answer: "Reach out to our event coordinators to send you further details! Catering & bar packages are divided up seasonally and by size of group; when filling out the inquiry from, the more information you can provide the better!"
     },
     {
       question: "What is your alcohol policy?",
