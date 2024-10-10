@@ -116,6 +116,7 @@
   }
 
   .faq-answer {
+    text-align: left;
     padding-top: 10px;
     color: #dbac34;
   }
@@ -294,14 +295,24 @@
   }
 
    
-   .hamburger-menu {
-    position: fixed;
-    top: 20px; 
-    left: 20px; 
-    z-index: 1100;
-    cursor: pointer;
+  .navigation {
+    position: relative;  /* Containing block for absolute positioning */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    padding: 0;  /* Remove padding */
+    margin: 0;   /* Remove margin */
+    width: 100%;
   }
 
+  .hamburger-menu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    margin: 0;   /* Remove margins */
+    padding: 0;  /* Remove padding */
+  }
 
   .hamburger-icon {
     width: 30px;
@@ -314,24 +325,18 @@
   .hamburger-icon span {
     display: block;
     height: 4px;
-    background-color: #dbac34; 
+    background-color: #dbac34;
     border-radius: 2px;
   }
 
-
-  .navigation {
-    justify-content: center;
-    padding: 10px 0;
-    height: auto; 
+  .navigation .logo {
+    margin: 50px auto 0 auto;  /* Center horizontally, adjust top margin */
   }
 
-
-  .navigation .logo img {
-    width: 50vw;
-    max-width: 200px;
-    height: auto;
+  .navigation .left-nav,
+  .navigation .right-nav {
+    display: none;  /* Hide on mobile */
   }
-
 
   .mobile-menu {
     position: fixed;
@@ -392,7 +397,7 @@
 
   .faq-page {
     color: #dbac34;
-    width: 60vw;
+    width: 80vw;
     margin: 0 auto;
   }
 
@@ -422,7 +427,7 @@
   }
 
   .map-container {
-    height: 60vh;
+    height: 50vh;
     width: auto;
     max-width: 80vw;
   }

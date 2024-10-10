@@ -6,7 +6,7 @@ function FAQPage() {
   const faqItems = [
     {
       question: "How many guests can The Duke Accommodate?",
-      answer: "We can seat up to 140 guests with room for a dance floor and stage, up to 270 guests\nfor a cocktail style reception with high and low-top tables, or up to 350 guests for a\n‘standing room only’ presentation or concert. If your guest count is larger, ask about\nThe Mercantile on Main for an additional space!"
+      answer: "We can seat up to 140 guests with room for a dance floor and stage, up to 270 guests for a cocktail style reception with high and low-top tables, or up to 350 guests for a ‘standing room only’ presentation or concert. If your guest count is larger, ask about\nThe Mercantile on Main for an additional space!"
     },
     {
       question: "What is the Venue Rental Fee?",
@@ -18,7 +18,7 @@ function FAQPage() {
     },
     {
       question: "Where do my guests park?",
-      answer: "There are 170 parking spaces in and around Parcel 5. Street parking is free after 5:00pm. The St.Joe’s garage is also conveniently attached right to our building (St.Joes Garage is closed on Saturdays and Sundays but will open for additional fee). In addition, the Mortimer Street garage is a stone’s throw away. The garages provide over 1,000 parking spaces attached right to the building. We can assist in booking a valet service for you if budget allows!"
+      answer: "There are 170 parking spaces in and around Parcel 5. Street parking is free after 5:00pm.\n The St.Joe’s garage is also conveniently attached right to our building (St.Joes Garage is closed on Saturdays and Sundays but will open for additional fee).\n In addition, the Mortimer Street garage is a stone’s throw away. The garages provide over 1,000 parking spaces attached right to the building. We can assist in booking a valet service for you if budget allows!"
     },
     {
       question: "How does payment work?",
@@ -42,7 +42,7 @@ function FAQPage() {
     },
     {
       question: "Can I have live music or a DJ?",
-      answer: "You are welcome to have live music or a DJ! All entertainment needs to be approved by our landlords and security team 90 days prior to your event. All entertainment companies and individuals need to have insurance and list ‘The Duke on Main’ and ‘Sibley Mixed Use’ as additionally insured.\n All music and entertainment must end by 11:00pm.\n The Duke on Main, The Mercantile on Main &amp; Sibley Building operators and security reserve the right to stop any music or performance that is aggressive, disrespectful, profane or incites violence."
+      answer: "You are welcome to have live music or a DJ! All entertainment needs to be approved by our landlords and security team 90 days prior to your event. All entertainment companies and individuals need to have insurance and list ‘The Duke on Main’ and ‘Sibley Mixed Use’ as additionally insured.\n All music and entertainment must end by 11:00pm.\n The Duke on Main, The Mercantile on Main &; Sibley Building operators and security reserve the right to stop any music or performance that is aggressive, disrespectful, profane or incites violence."
     },
     {
       question: "Am I allowed to decorate?",
