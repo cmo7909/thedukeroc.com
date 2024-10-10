@@ -26,6 +26,32 @@
     border-radius: 8px;  /* Optional: Add some rounding for better aesthetics */
   }
 
+  .photographer-credit {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(13, 13, 13, 0.8); /* Semi-transparent background */
+    color: #dbac34; /* Adjust text color as needed */
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000; /* Ensure it stays above other elements */
+  }
+  
+  .photographer-credit p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .photographer-credit a {
+    color: #dbac34;
+    text-decoration: underline;
+  }
+  
+  .photographer-credit a:hover {
+    color: #ffffff;
+  }
+
 }
 
   /* Tablet Styles (769px - 1024px) */
@@ -53,6 +79,32 @@
     display: block;
     border-radius: 8px;  /* Optional: Add some rounding for better aesthetics */
   }
+
+  .photographer-credit {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(13, 13, 13, 0.8); /* Semi-transparent background */
+    color: #dbac34; /* Adjust text color as needed */
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000; /* Ensure it stays above other elements */
+  }
+  
+  .photographer-credit p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .photographer-credit a {
+    color: #dbac34;
+    text-decoration: underline;
+  }
+  
+  .photographer-credit a:hover {
+    color: #ffffff;
+  }
 }
   
   /* Adjustments for smaller screens */
@@ -78,6 +130,32 @@
       height: auto;  /* Keep the image aspect ratio */
       display: block;
       border-radius: 8px;  /* Optional: Add some rounding for better aesthetics */
+    }
+
+    .photographer-credit {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(13, 13, 13, 0.8); /* Semi-transparent background */
+      color: #dbac34; /* Adjust text color as needed */
+      text-align: center;
+      padding: 10px 0;
+      z-index: 1000; /* Ensure it stays above other elements */
+    }
+    
+    .photographer-credit p {
+      margin: 0;
+      font-size: 1rem;
+    }
+    
+    .photographer-credit a {
+      color: #dbac34;
+      text-decoration: underline;
+    }
+    
+    .photographer-credit a:hover {
+      color: #ffffff;
     }
   }
   
