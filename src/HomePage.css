@@ -26,6 +26,7 @@
   
     .info-text {
       color: #dbac34;
+      font-size: larger;
     }
 
     .banner-container {
@@ -35,6 +36,11 @@
     .home-banner {
       width: 90vw;
     }
+
+    .contact{
+      width: 30vw;
+      margin: 0 auto;
+    }
   }
   
   @media (min-width: 769px) and (max-width: 1024px) {
@@ -43,6 +49,7 @@
         border-width: 5px;
         width: 40vw;
         margin: 0 auto;
+        margin-top: 1vh;
       }
   
     .info-text {
@@ -55,6 +62,11 @@
   
     .home-banner {
       width: 95vw; 
+    }
+
+    .contact{
+      width: 30vw;
+      margin: 0 auto;
     }
   }
   
@@ -78,5 +90,10 @@
   
     .home-banner {
       width: 88vw;
+    }
+
+    .contact{
+      width: 50vw;
+      margin: 0 auto;
     }
   }

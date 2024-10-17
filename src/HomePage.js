@@ -20,6 +20,15 @@ function HomePage() {
           event expertise from the team that owns Avvino, La Bola &amp; Frenchman Street. When
           you book The Duke, you will be guaranteed an exclusive experience of food, wine, and
           cocktails, while immersing yourself in a creative one-of-a-kind venue.
+          <br />
+          <br />
+          <hr className='contact'></hr>
+          <br />
+          TheDukeOnMain@gmail.com 
+          <br />
+          232 East Main Street
+          <br />
+          Rochester, NY 14604
         </p>
       </div>
     </div>
