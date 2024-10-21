@@ -1,5 +1,8 @@
 import React from 'react';
 import './Gallery.css';
+import { useState } from 'react';
+import Lightbox from 'yet-another-react-lightbox';
+import 'yet-another-react-lightbox/styles.css';
 import image1 from './Gallery/Gallery1.jpg';
 import image2 from './Gallery/Gallery2.jpg';
 import image3 from './Gallery/Gallery3.jpg';
@@ -21,56 +24,74 @@ import image18 from './Gallery/Gallery18.jpg';
 import image19 from './Gallery/Gallery19.jpg';
 import image20 from './Gallery/Gallery20.jpg';
 
-function GalleryImage({ src, alt }) {
-  return (
-    <div className="gallery-image">
-      <img src={src} alt={alt} />
-    </div>
-  );
-}
+
 
 function Gallery() {
   const images = [
-    { src: image1, alt: 'Image 1' },
-    { src: image2, alt: 'Image 2' },
-    { src: image3, alt: 'Image 3' },
-    { src: image4, alt: 'Image 4' },
-    { src: image5, alt: 'Image 5' },
-    { src: image6, alt: 'Image 6' },
-    { src: image7, alt: 'Image 7' },
-    { src: image8, alt: 'Image 8' },
-    { src: image9, alt: 'Image 9' },
-    { src: image10, alt: 'Image 10' },
-    { src: image11, alt: 'Image 11' },
-    { src: image12, alt: 'Image 12' },
-    { src: image13, alt: 'Image 13' },
-    { src: image14, alt: 'Image 14' },
-    { src: image15, alt: 'Image 15' },
-    { src: image16, alt: 'Image 16' },
-    { src: image19, alt: 'Image 19' },
-    { src: image17, alt: 'Image 17' },
-    { src: image18, alt: 'Image 18' },
-    { src: image20, alt: 'Image 20' },
+    { src: image1, alt: 'Image 1', width: 1920, height: 1080  },
+    { src: image2, alt: 'Image 2', width: 1920, height: 1080  },
+    { src: image3, alt: 'Image 3', width: 1920, height: 1080  },
+    { src: image4, alt: 'Image 4', width: 1920, height: 1080  },
+    { src: image5, alt: 'Image 5', width: 1920, height: 1080  },
+    { src: image6, alt: 'Image 6', width: 1920, height: 1080  },
+    { src: image7, alt: 'Image 7', width: 1920, height: 1080  },
+    { src: image8, alt: 'Image 8', width: 1920, height: 1080  },
+    { src: image9, alt: 'Image 9', width: 1920, height: 1080  },
+    { src: image10, alt: 'Image 10', width: 1920, height: 1080  },
+    { src: image11, alt: 'Image 11', width: 1920, height: 1080  },
+    { src: image12, alt: 'Image 12', width: 1920, height: 1080  },
+    { src: image13, alt: 'Image 13', width: 1920, height: 1080  },
+    { src: image14, alt: 'Image 14', width: 1920, height: 1080  },
+    { src: image15, alt: 'Image 15', width: 1920, height: 1080  },
+    { src: image16, alt: 'Image 16', width: 1920, height: 1080  },
+    { src: image19, alt: 'Image 19', width: 1920, height: 1080  },
+    { src: image17, alt: 'Image 17', width: 1920, height: 1080  },
+    { src: image18, alt: 'Image 18', width: 1920, height: 1080  },
+    { src: image20, alt: 'Image 20', width: 1920, height: 1080  },
   ];
+
+  const [open, setOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const openLightbox = (index) => {
+    setCurrentIndex(index);
+    setOpen(true);
+  };
 
   return (
     <div className="gallery-page">
       <div className="gallery-container">
         {images.map((image, index) => (
-          <GalleryImage key={index} src={image.src} alt={image.alt} />
+          <div className="gallery-image" key={index}>
+            <img
+              src={image.src}
+              alt={image.alt}
+              loading="lazy"
+              onClick={() => openLightbox(index)}
+            />
+          </div>
         ))}
       </div>
+
+      {open && (
+        <Lightbox
+        slides={images}
+        open={open}
+        index={currentIndex}
+        close={() => setOpen(false)}
+        />
+      )}
 
       {/* Photographer Credit */}
       <div className="photographer-credit">
         <p>
-          Photographs by {''}
+          Photographs by{' '}
           <a
             href="https://johnschlia.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            [John Schlia]
+            John Schlia
           </a>
         </p>
       </div>
