@@ -5,7 +5,7 @@ function HomePage() {
   return (
     <div className="home-page">
       <div className='banner-container'>
-        <img src={require("./Gallery/HomeBanner.jpg")} alt="Home Banner" className="home-banner" />
+        <img src={require("./Gallery/HomeBanner.jpg")} alt="theDukeRoc" className="home-banner" />
       </div>
       <div className="info-box">
         <p className="info-text">
