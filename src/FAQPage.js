@@ -10,7 +10,7 @@ function FAQPage() {
     },
     {
       question: "What is the Venue Rental Fee?",
-      answer: "Venue rental fee is $4,000 for Sunday–Thursday and $5,500 for Friday and Saturdays.\n*Holiday Rates may apply, e.g. New Years Eve, Valentines Day, Mother’s Day etc."
+      answer: "Venue rental fee is $2,500 for Sunday–Thursday and $3,500 for Friday and Saturdays.\n*Holiday Rates may apply, e.g. New Years Eve, Valentines Day, Mother’s Day etc."
     },
     {
       question: "What does the Venue Rental Include?",
